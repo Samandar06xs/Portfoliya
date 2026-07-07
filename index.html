@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samandar Madaminov — Penetration Tester & Security Specialist</title>
+<meta name="description" content="Madaminov Samandar — Penetration Tester va Axborot Xavfsizligi Mutaxassisi. Pentest, SOC/Blue Team, Red Team xizmatlari. Remote ishga ochiq.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="noise-overlay"></div>
+<canvas id="net-bg"></canvas>
+
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="#home" class="brand">
+      <span class="brand-mark">SM<span class="brand-dot">_</span></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link active" data-section="home" data-i18n="nav.home">Bosh sahifa</a>
+      <a href="#about" class="nav-link" data-section="about" data-i18n="nav.about">Haqida</a>
+      <a href="#services" class="nav-link" data-section="services" data-i18n="nav.services">Xizmatlar</a>
+      <a href="#skills" class="nav-link" data-section="skills" data-i18n="nav.skills">Ko'nikmalar</a>
+      <a href="#experience" class="nav-link" data-section="experience" data-i18n="nav.experience">Tajriba</a>
+      <a href="#certs" class="nav-link" data-section="certs" data-i18n="nav.certs">Sertifikatlar</a>
+      <a href="#contact" class="nav-link" data-section="contact" data-i18n="nav.contact">Aloqa</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-switch" id="langSwitch" role="group" aria-label="Til / Language / Язык">
+        <button type="button" class="lang-btn active" data-lang="uz">UZ</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="ru">RU</button>
+      </div>
+      <button class="burger" id="burger" aria-label="menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-grid"></div>
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow reveal"><span class="eyebrow-line"></span><span data-i18n="hero.eyebrow">AXBOROT XAVFSIZLIGI MUTAXASSISI</span></p>
+      <h1 class="hero-title reveal">
+        <span class="gradient-text">Samandar Madaminov</span>
+      </h1>
+      <p class="hero-desc reveal" data-i18n-html="hero.desc">
+        Kiberxavfsizlik bo'yicha <strong>3+ yillik</strong> amaliy tajribaga ega mutaxassis. Web Application Pentesting, Active Directory hujumlari va Blue Team operatsiyalari yo'nalishida faoliyat yuritadi. <strong>30+</strong> veb-saytda <strong>50+</strong> zaiflik aniqlagan va Bug Bounty dasturlaridan <strong>2 marta</strong> mukofot qozongan.
+      </p>
+      <div class="hero-badges reveal">
+        <span class="chip"><svg viewBox="0 0 24 24" class="chip-ico"><path d="M12 2 3 6v6c0 5 3.5 8.5 9 10 5.5-1.5 9-5 9-10V6l-9-4Z"/></svg>CPTS</span>
+        <span class="chip"><svg viewBox="0 0 24 24" class="chip-ico"><path d="M12 2 3 6v6c0 5 3.5 8.5 9 10 5.5-1.5 9-5 9-10V6l-9-4Z"/></svg>CWES</span>
+        <span class="chip"><svg viewBox="0 0 24 24" class="chip-ico"><circle cx="12" cy="12" r="9"/></svg><span data-i18n="common.location">Toshkent, O'zbekiston</span></span>
+      </div>
+      <div class="hero-cta reveal">
+        <a href="#contact" class="btn btn-primary"><span data-i18n="hero.ctaContact">Bog'lanish</span></a>
+        <a href="#services" class="btn btn-ghost"><span data-i18n="hero.ctaServices">Xizmatlarni ko'rish</span></a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat"><span class="stat-num" data-count="3">0</span><span class="stat-suffix">+</span><p data-i18n="hero.statYears">Yillik tajriba</p></div>
+        <div class="stat"><span class="stat-num" data-count="30">0</span><span class="stat-suffix">+</span><p data-i18n="hero.statSites">Tekshirilgan sayt</p></div>
+        <div class="stat"><span class="stat-num" data-count="50">0</span><span class="stat-suffix">+</span><p data-i18n="hero.statVulns">Aniqlangan zaiflik</p></div>
+        <div class="stat"><span class="stat-num" data-count="2">0</span><span class="stat-suffix">x</span><p data-i18n="hero.statBounty">Bug Bounty mukofot</p></div>
+      </div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-cue"><span></span><span data-i18n="hero.scrollCue">Pastga aylantiring</span></a>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="container">
+    <p class="section-eyebrow reveal" data-i18n="about.eyebrow">01 — TANISHUV</p>
+    <h2 class="section-title reveal" data-i18n="about.title">Haqida</h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p data-i18n-html="about.p1">
+          Kiberxavfsizlik mutaxassisi, <strong>3+ yillik</strong> amaliy tajriba bilan. Web Application Pentesting,
+          Mobile Pentesting, Blue Team operatsiyalari va Windows/Linux infratuzilmasini boshqarish
+          bo'yicha chuqur bilimga ega.
+        </p>
+        <p data-i18n-html="about.p2">
+          Hozirda <strong>Renesans AJ</strong> tarkibida Axborot Xavfsizligi Yetakchi Mutaxassisi lavozimida
+          faoliyat yuritadi: to'liq IT infratuzilmasini audit qilish, SIEM (Wazuh, ELK Stack) tizimlarini boshqarish,
+          Incident Response va Windows Server hardening bilan shug'ullanadi. Bundan tashqari banklar va yirik
+          tashkilotlar uchun external/internal penetration testing loyihalarida ishtirok etgan.
+        </p>
+      </div>
+      <div class="about-side reveal">
+        <div class="info-card">
+          <div class="info-row"><span data-i18n="about.labelName">Ism</span><b>Madaminov Samandar</b></div>
+          <div class="info-row"><span data-i18n="about.labelSpec">Mutaxassislik</span><b data-i18n="about.valueSpec">Penetration Tester / AX Mutaxassisi</b></div>
+          <div class="info-row"><span data-i18n="about.labelLocation">Manzil</span><b data-i18n="common.location">Toshkent, O'zbekiston</b></div>
+          <div class="info-row"><span data-i18n="about.labelFormat">Format</span><b data-i18n="about.valueFormat">Remote / Onsite / Hybrid</b></div>
+          <div class="info-row"><span data-i18n="about.labelPhone">Telefon</span><b>+998 94 174 78 81</b></div>
+          <div class="info-row"><span data-i18n="about.labelEmail">Email</span><b>madaminovsamandar230@gmail.com</b></div>
+          <a href="#contact" class="btn btn-primary btn-block"><span data-i18n="about.ctaBtn">Hamkorlik boshlash</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="section section-alt" id="services">
+  <div class="container">
+    <p class="section-eyebrow reveal" data-i18n="services.eyebrow">02 — XIZMATLAR</p>
+    <h2 class="section-title reveal" data-i18n="services.title">Taqdim etiladigan xizmatlar</h2>
+    <p class="section-sub reveal" data-i18n="services.sub">Tashkilotingiz xavfsizligini offensiv va defensiv tomondan mustahkamlash uchun to'liq xizmatlar spektri.</p>
+    <div class="remote-banner reveal">
+      <span class="dot-live"></span>
+      <p data-i18n-html="services.remoteBanner"><b>Remote ishga ochiq.</b> Barcha xizmatlar masofadan (remote) yoki joyida (onsite) formatda taqdim etiladi — hudud to'siq bo'lmaydi.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-ico ico-red">
+          <svg viewBox="0 0 24 24"><path d="M12 2 3 6v6c0 5 3.5 8.5 9 10 5.5-1.5 9-5 9-10V6l-9-4Zm-1.2 13.2L7 11.4l1.4-1.4 2.4 2.4 5.4-5.4L17.6 8.4l-6.8 6.8Z"/></svg>
+        </div>
+        <h3 data-i18n="services.card1.title">Penetration Testing</h3>
+        <p data-i18n="services.card1.desc">Web ilovalar, tarmoq infratuzilmasi va Active Directory muhitida real hujum stsenariylari
+          orqali zaifliklarni aniqlash va ekspluatatsiya qilish (OWASP Top 10: SQLi, XSS, IDOR, CSRF, SSRF, RCE).</p>
+        <ul class="service-tags">
+          <li>Web App Pentest</li><li>Network Pentest</li><li>Active Directory Attack</li><li>Retest</li>
+        </ul>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-ico ico-blue">
+          <svg viewBox="0 0 24 24"><path d="M12 2c-4.4 0-8 3.6-8 8 0 5.4 4.5 9.8 7.4 11.6.4.2.8.2 1.2 0C15.5 19.8 20 15.4 20 10c0-4.4-3.6-8-8-8Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/></svg>
+        </div>
+        <h3 data-i18n="services.card2.title">SOC / Blue Team Xizmatlari</h3>
+        <p data-i18n="services.card2.desc">SIEM tizimlarini (Wazuh, Elastic Stack) joriy etish, log tahlili, real-time monitoring, threat
+          detection va xavfsizlik hodisalariga (Incident Response) tezkor javob berish.</p>
+        <ul class="service-tags">
+          <li>SIEM Deploy</li><li>Log Analysis</li><li>Incident Response</li><li>Threat Detection</li>
+        </ul>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-ico ico-purple">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16v4H4V4Zm0 6h10v10H4V10Zm12 0h4v10h-4V10Z"/></svg>
+        </div>
+        <h3 data-i18n="services.card3.title">Infratuzilma xavfsizligi</h3>
+        <p data-i18n="services.card3.desc">Windows Server muhitini (Active Directory, GPO, DNS, DHCP) hardening qilish, DLP tizimlarini
+          sozlash va tarmoq segmentatsiyasi (VLAN, Firewall, MikroTik/Cisco).</p>
+        <ul class="service-tags">
+          <li>AD Hardening</li><li>DLP</li><li>Network Segmentation</li><li>Firewall</li>
+        </ul>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-ico ico-green">
+          <svg viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5Zm0 8L2 15l10 5 10-5-10-5Z"/></svg>
+        </div>
+        <h3 data-i18n="services.card4.title">Bug Bounty & Xavfsizlik Auditi</h3>
+        <p data-i18n="services.card4.desc">Mustaqil zaiflik izlash dasturlari va professional audit orqali kompaniyangiz uchun
+          maxsus xavfsizlik hisobotlarini tayyorlash.</p>
+        <ul class="service-tags">
+          <li>Vulnerability Scan</li><li>Security Audit</li><li>Report</li>
+        </ul>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-ico ico-orange">
+          <svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4Zm0 10.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5ZM8 17c.6-1.8 2.2-3 4-3s3.4 1.2 4 3H8Z"/></svg>
+        </div>
+        <h3 data-i18n="services.card5.title">Security Awareness Training</h3>
+        <p data-i18n="services.card5.desc">Xodimlar uchun phishing simulyatsiyalari va amaliy xavfsizlik treninglari — inson omilidan
+          kelib chiqadigan xavflarni kamaytirish.</p>
+        <ul class="service-tags">
+          <li>Phishing Simulation</li><li>Trainings</li>
+        </ul>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-ico ico-cyan">
+          <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4V6Zm0 5h16v2H4v-2Zm0 5h10v2H4v-2Z"/></svg>
+        </div>
+        <h3 data-i18n="services.card6.title">Konsalting va Automatsiya</h3>
+        <p data-i18n="services.card6.desc">Python/Bash/PowerShell yordamida xavfsizlik jarayonlarini avtomatlashtirish, maxsus
+          skriptlar va Telegram bot integratsiyalari ishlab chiqish.</p>
+        <ul class="service-tags">
+          <li>Python Automation</li><li>Scripting</li><li>Telegram Bots</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="section" id="skills">
+  <div class="container">
+    <p class="section-eyebrow reveal" data-i18n="skills.eyebrow">03 — KO'NIKMALAR</p>
+    <h2 class="section-title reveal" data-i18n="skills.title">Texnik ko'nikmalar</h2>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <h4><span class="skill-dot dot-red"></span><span data-i18n="skills.cat1">Red Team / Pentest</span></h4>
+        <div class="tag-wrap">
+          <span>Web App Pentesting</span><span>Network Pentesting</span><span>Active Directory Attack</span>
+          <span>Post-Exploitation</span><span>Pivoting & Tunneling</span><span>Bug Bounty</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h4><span class="skill-dot dot-blue"></span><span data-i18n="skills.cat2">Blue Team / Defense</span></h4>
+        <div class="tag-wrap">
+          <span>Wazuh SIEM</span><span>Elastic Stack</span><span>Kibana Dashboard</span>
+          <span>Log Analysis</span><span>Incident Response</span><span>Threat Detection</span><span>DLP</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h4><span class="skill-dot dot-purple"></span><span data-i18n="skills.cat3">Windows Server</span></h4>
+        <div class="tag-wrap">
+          <span>Active Directory</span><span>Group Policy (GPO)</span><span>DNS</span><span>DHCP</span>
+          <span>File Server</span><span>RDP Security</span><span>Event Log</span><span>Hardening</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h4><span class="skill-dot dot-cyan"></span><span data-i18n="skills.cat4">Monitoring</span></h4>
+        <div class="tag-wrap">
+          <span>Wazuh</span><span>Elasticsearch</span><span>Logstash</span><span>Kibana</span>
+          <span>Event Viewer</span><span>Sysmon</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h4><span class="skill-dot dot-green"></span><span data-i18n="skills.cat5">Tarmoq</span></h4>
+        <div class="tag-wrap">
+          <span>TCP/IP</span><span>OSI</span><span>VLAN</span><span>NAT</span><span>Routing & Switching</span>
+          <span>MikroTik RouterOS</span><span>Cisco</span><span>GNS3</span><span>Proxmox</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h4><span class="skill-dot dot-orange"></span><span data-i18n="skills.cat6">OS & Skriptlash</span></h4>
+        <div class="tag-wrap">
+          <span>Kali / Ubuntu / Debian</span><span>Windows Server 2016–2022</span>
+          <span>Python</span><span>Bash</span><span>PowerShell</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tools-strip reveal">
+      <p class="tools-label" data-i18n="skills.toolsLabel">Xavfsizlik vositalari</p>
+      <div class="tools-marquee">
+        <div class="tools-track">
+          <span>Burp Suite</span><span>Nmap</span><span>Metasploit</span><span>Nessus</span><span>SQLMap</span>
+          <span>Hydra</span><span>Gobuster</span><span>BloodHound</span><span>Mimikatz</span><span>CrackMapExec</span>
+          <span>Burp Suite</span><span>Nmap</span><span>Metasploit</span><span>Nessus</span><span>SQLMap</span>
+          <span>Hydra</span><span>Gobuster</span><span>BloodHound</span><span>Mimikatz</span><span>CrackMapExec</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="section section-alt" id="experience">
+  <div class="container">
+    <p class="section-eyebrow reveal" data-i18n="experience.eyebrow">04 — ISH TAJRIBASI</p>
+    <h2 class="section-title reveal" data-i18n="experience.title">Professional yo'l</h2>
+
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-head">
+            <h3 data-i18n="experience.job1.role">Axborot Xavfsizligi Yetakchi Mutaxassisi</h3>
+            <span class="tl-badge" data-i18n="experience.current">Hozirgi</span>
+          </div>
+          <p class="tl-company">Renesans AJ</p>
+          <ul>
+            <li data-i18n="experience.job1.b1">To'liq IT infratuzilmani (server, tarmoq, workstation, veb-ilova) muntazam audit qilish</li>
+            <li data-i18n="experience.job1.b2">Windows Server muhitini boshqarish: Active Directory, GPO, DNS, DHCP, RDP xavfsizligi va hardening</li>
+            <li data-i18n="experience.job1.b3">DLP tizimini joriy etish va monitoring qilish</li>
+            <li data-i18n="experience.job1.b4">Wazuh SIEM va Elastic Stack (ELK) orqali log yig'ish va vizualizatsiya</li>
+            <li data-i18n="experience.job1.b5">Windows Event Log tahlili (4624, 4625, 4648, 4688, 4720) va anomaliya aniqlash</li>
+            <li data-i18n="experience.job1.b6">Penetration testing, vulnerability scanning va Incident Response</li>
+            <li data-i18n="experience.job1.b7">Phishing simulyatsiyalari va security awareness treninglari</li>
+            <li data-i18n="experience.job1.b8">MikroTik konfiguratsiyasi, firewall qoidalari, VLAN segmentatsiyasi</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-head"><h3 data-i18n="experience.job2.role">Penetration Tester</h3></div>
+          <p class="tl-company">Hsec Consulting</p>
+          <ul>
+            <li data-i18n="experience.job2.b1">Banklar va yirik tashkilotlar uchun external/internal penetration testing</li>
+            <li data-i18n="experience.job2.b2">Web ilovalar, API va tarmoqda zaifliklarni aniqlash, ekspluatatsiya va hisobot yozish</li>
+            <li data-i18n="experience.job2.b3">OWASP Top 10: SQLi, XSS, IDOR, CSRF, SSRF, RCE bo'yicha amaliy tekshiruvlar</li>
+            <li data-i18n="experience.job2.b4">Remediation jarayonini boshqarish va retest o'tkazish</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-head"><h3 data-i18n="experience.job3.role">QA Tester / CTF Tuzuvchi</h3></div>
+          <p class="tl-company">Haad TC</p>
+          <ul>
+            <li data-i18n="experience.job3.b1">Haady platformasi uchun Web, Network, Forensics yo'nalishlarida CTF vazifalari yaratish</li>
+            <li data-i18n="experience.job3.b2">CTF vazifalarining texnik to'g'riligini sinovdan o'tkazish</li>
+            <li data-i18n="experience.job3.b3">Kiberxavfsizlik o'quvchilari uchun amaliy materiallar tayyorlash</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATIONS ============ -->
+<section class="section" id="certs">
+  <div class="container">
+    <p class="section-eyebrow reveal" data-i18n="certs.eyebrow">05 — SERTIFIKATLAR</p>
+    <h2 class="section-title reveal" data-i18n="certs.title">Sertifikatlar va ta'lim</h2>
+
+    <div class="cert-grid">
+      <div class="cert-card reveal">
+        <div class="cert-glow"></div>
+        <span class="cert-code">CPTS</span>
+        <p class="cert-name">Certified Penetration Testing Specialist</p>
+        <p class="cert-org">Hack The Box</p>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-glow"></div>
+        <span class="cert-code">CWES</span>
+        <p class="cert-name">Certified Web Exploitation Specialist</p>
+        <p class="cert-org">Hack The Box</p>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-glow"></div>
+        <span class="cert-code">CRTA</span>
+        <p class="cert-name">Certified Red Team Analyst</p>
+        <p class="cert-org">CyberWarFare Labs</p>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-glow"></div>
+        <span class="cert-code">PEN-100</span>
+        <p class="cert-name">Introduction to Penetration Testing</p>
+        <p class="cert-org">Offensive Security</p>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-glow"></div>
+        <span class="cert-code">HPTC</span>
+        <p class="cert-name">Haad Penetration Tester Certificate</p>
+        <p class="cert-org">Haad TC</p>
+      </div>
+    </div>
+
+    <div class="edu-row reveal">
+      <div class="edu-item">
+        <h4>Hack The Box Academy</h4>
+        <p>Web Exploitation Specialist & Penetration Testing Specialist</p>
+      </div>
+      <div class="edu-item">
+        <h4>Haad TC</h4>
+        <p data-i18n="certs.edu2">Penetration Tester (7 oylik kurs)</p>
+      </div>
+      <div class="edu-item">
+        <h4>Astro Education</h4>
+        <p>Python Backend Development</p>
+      </div>
+      <div class="edu-item">
+        <h4>Ilm.uz Academy</h4>
+        <p>Network Administrator</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACHIEVEMENTS ============ -->
+<section class="section section-alt" id="achievements">
+  <div class="container">
+    <p class="section-eyebrow reveal" data-i18n="achievements.eyebrow">06 — YUTUQLAR</p>
+    <h2 class="section-title reveal" data-i18n="achievements.title">Natijalar</h2>
+
+    <div class="achieve-grid">
+      <div class="achieve-card reveal">
+        <div class="achieve-num"><span data-count="50">0</span>+</div>
+        <p data-i18n="achievements.a1">30+ veb-saytda aniqlangan zaiflik (XSS, SQLi, CSRF, IDOR, RCE va boshqalar)</p>
+      </div>
+      <div class="achieve-card reveal">
+        <div class="achieve-num"><span data-count="2">0</span>x</div>
+        <p data-i18n="achievements.a2">Bug Bounty dasturlaridan rasmiy mukofot qozonilgan</p>
+      </div>
+      <div class="achieve-card reveal">
+        <div class="achieve-num">CPTS</div>
+        <p data-i18n="achievements.a3">Hack The Box platformasida CPTS va CWES sertifikatlariga erishilgan</p>
+      </div>
+      <div class="achieve-card reveal">
+        <div class="achieve-num">🏦</div>
+        <p data-i18n="achievements.a4">Banklar va yirik tashkilotlar uchun muvaffaqiyatli pentest loyihalari</p>
+      </div>
+    </div>
+
+    <div class="lang-row reveal">
+      <div class="lang-item">
+        <div class="lang-head"><span data-i18n="achievements.langUz">O'zbek</span><b data-i18n="achievements.langUzLevel">Ona tili</b></div>
+        <div class="lang-bar"><div class="lang-fill" style="--w:100%"></div></div>
+      </div>
+      <div class="lang-item">
+        <div class="lang-head"><span data-i18n="achievements.langEn">Ingliz tili</span><b data-i18n="achievements.langEnLevel">O'qib tushunish</b></div>
+        <div class="lang-bar"><div class="lang-fill" style="--w:70%"></div></div>
+      </div>
+      <div class="lang-item">
+        <div class="lang-head"><span data-i18n="achievements.langRu">Rus tili</span><b data-i18n="achievements.langRuLevel">Tushunish</b></div>
+        <div class="lang-bar"><div class="lang-fill" style="--w:60%"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section contact-section" id="contact">
+  <div class="container">
+    <p class="section-eyebrow reveal" data-i18n="contact.eyebrow">07 — ALOQA</p>
+    <h2 class="section-title reveal" data-i18n="contact.title">Hamkorlikka tayyor</h2>
+    <p class="section-sub reveal" data-i18n="contact.sub">Pentest, SOC monitoring yoki xavfsizlik konsalting bo'yicha loyihangiz bormi? Remote yoki onsite — muloqotga tayyor.</p>
+
+    <div class="contact-grid">
+      <div class="contact-cards reveal">
+        <a href="mailto:madaminovsamandar230@gmail.com" class="contact-card">
+          <div class="contact-ico"><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3V5Zm2 2 7 5 7-5"/></svg></div>
+          <div><span data-i18n="contact.labelEmail">Email</span><b>madaminovsamandar230@gmail.com</b></div>
+        </a>
+        <a href="tel:+998941747881" class="contact-card">
+          <div class="contact-ico"><svg viewBox="0 0 24 24"><path d="M6 2h4l2 5-2.5 1.5a12 12 0 0 0 6 6L17 12l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 4 4a2 2 0 0 1 2-2Z"/></svg></div>
+          <div><span data-i18n="contact.labelPhone">Telefon</span><b>+998 94 174 78 81</b></div>
+        </a>
+        <a href="https://linkedin.com/in/samandar-madaminov" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4V4Zm3 6v7m0-10v.01M11 17v-4c0-1.5 1-2.5 2.5-2.5S16 11.5 16 13v4"/></svg></div>
+          <div><span>LinkedIn</span><b>/in/samandar-madaminov</b></div>
+        </a>
+        <div class="contact-card contact-card-static">
+          <div class="contact-ico"><svg viewBox="0 0 24 24"><path d="M12 2 3 6v6c0 5 3.5 8.5 9 10 5.5-1.5 9-5 9-10V6l-9-4Z"/></svg></div>
+          <div><span data-i18n="contact.labelLocation">Manzil</span><b data-i18n="common.location">Toshkent, O'zbekiston</b></div>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm">
+        <input type="hidden" name="access_key" value="129e2805-1d22-445e-bc63-ddd5aa9c7c4b">
+        <input type="hidden" name="subject" value="Portfolio orqali yangi xabar">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="form-row">
+          <label data-i18n="form.labelName">Ismingiz</label>
+          <input type="text" name="name" required placeholder="Ismingizni kiriting" data-i18n-placeholder="form.placeholderName">
+        </div>
+        <div class="form-row">
+          <label data-i18n="contact.labelEmail">Email</label>
+          <input type="email" name="email" required placeholder="email@example.com">
+        </div>
+        <div class="form-row">
+          <label data-i18n="form.labelMessage">Xabar</label>
+          <textarea name="message" rows="4" required placeholder="Loyihangiz haqida qisqacha yozing..." data-i18n-placeholder="form.placeholderMessage"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block"><span data-i18n="form.submit">Xabar yuborish</span></button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span class="brand-mark">SM<span class="brand-dot">_</span></span>
+    <p>© <span id="year"></span> Madaminov Samandar. <span data-i18n="footer.rights">Barcha huquqlar himoyalangan.</span></p>
+    <a href="#home" class="to-top" data-i18n="footer.toTop">Tepaga ↑</a>
+  </div>
+</footer>
+
+<script src="translations.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
