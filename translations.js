@@ -9,7 +9,8 @@ const TRANSLATIONS = {
     "nav.contact": "Aloqa",
 
     "hero.eyebrow": "AXBOROT XAVFSIZLIGI MUTAXASSISI",
-    "hero.desc": "Kiberxavfsizlik bo'yicha <strong>3+ yillik</strong> amaliy tajribaga ega mutaxassis. Web Application Pentesting, Active Directory hujumlari va Blue Team operatsiyalari yo'nalishida faoliyat yuritadi. <strong>30+</strong> veb-saytda <strong>50+</strong> zaiflik aniqlagan va Bug Bounty dasturlaridan <strong>2 marta</strong> mukofot qozongan.",
+    "hero.term.status": "Remote va onsite ishga tayyor",
+    "hero.term.focus": "Web AppSec · Active Directory · Blue Team",
     "hero.ctaContact": "Bog'lanish",
     "hero.ctaServices": "Xizmatlarni ko'rish",
     "hero.statYears": "Yillik tajriba",
@@ -128,7 +129,8 @@ const TRANSLATIONS = {
     "nav.contact": "Contact",
 
     "hero.eyebrow": "INFORMATION SECURITY SPECIALIST",
-    "hero.desc": "A cybersecurity specialist with <strong>3+ years</strong> of hands-on experience, focused on Web Application Pentesting, Active Directory attacks, and Blue Team operations. Has discovered <strong>50+</strong> vulnerabilities across <strong>30+</strong> websites and earned <strong>2</strong> Bug Bounty rewards.",
+    "hero.term.status": "Available for remote & onsite work",
+    "hero.term.focus": "Web AppSec · Active Directory · Blue Team",
     "hero.ctaContact": "Contact Me",
     "hero.ctaServices": "View Services",
     "hero.statYears": "Years of experience",
@@ -247,7 +249,8 @@ const TRANSLATIONS = {
     "nav.contact": "Контакты",
 
     "hero.eyebrow": "СПЕЦИАЛИСТ ПО ИНФОРМАЦИОННОЙ БЕЗОПАСНОСТИ",
-    "hero.desc": "Специалист по кибербезопасности с <strong>3+ годами</strong> практического опыта. Специализируется на Web Application Pentesting, атаках на Active Directory и операциях Blue Team. Обнаружил <strong>50+</strong> уязвимостей на <strong>30+</strong> сайтах и дважды получал награды по программам Bug Bounty.",
+    "hero.term.status": "Готов к удалённой и очной работе",
+    "hero.term.focus": "Web AppSec · Active Directory · Blue Team",
     "hero.ctaContact": "Связаться",
     "hero.ctaServices": "Смотреть услуги",
     "hero.statYears": "Лет опыта",
